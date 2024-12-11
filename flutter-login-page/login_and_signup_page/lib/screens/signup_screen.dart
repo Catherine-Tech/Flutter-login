@@ -13,6 +13,10 @@ class _SignupScreenState extends State<SignupScreen> {
   final _formSignInKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return const CustomScaffoldWidget();
+    return const CustomScaffoldWidget(
+      child: Column(
+        children:[ ]
+      )
+    );
   }
 }
