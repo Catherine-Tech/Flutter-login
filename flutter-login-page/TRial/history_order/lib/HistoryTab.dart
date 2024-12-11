@@ -1,0 +1,3 @@
+import 'package:flutter/material.dart';
+
+class HistoryTab extends StatelessWidget { final List<Map<String, String>> orders = [ { 'name': 'Coffee Shop A', 'status': 'Delivered', 'time': '10:00 AM', 'rating': '5 stars' }, { 'name': 'Coffee Shop B', 'status': 'Delivered', 'time': '11:00 AM', 'rating': '4 stars' }, { 'name': 'Coffee Shop C', 'status': 'Delivered', 'time': '1:00 PM', 'rating': '5 stars' }, ]; @override Widget build(BuildContext context) { return ListView.builder( itemCount: orders.length, itemBuilder: (context, index) { return ListTile( title: Text(orders[index]['name'] ?? ''), subtitle: Text( '${orders[index]['status']} at ${orders[index]['time']} - ${orders[index]['rating']}'), leading: Icon(Icons.local_cafe), ); }, ); } }
